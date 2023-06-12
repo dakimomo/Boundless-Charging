@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+  *{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.form-container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 60px;
+  background: #E0E0E0;
+}
+
+.form-container img{
+  align-items: center;
+  max-width: 250px;
+}
+
+.form-container .logo{
+    position: relative; top: -13px;
+}
+
+.form-container form{
+  padding:20px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  text-align: center;
+  box-shadow: 5px 10px rgba(0,0,0,0.1);
+  width:500px;
+}
+
+.form-container form h3{
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2F2F2F;
+}
+
+.form-container form input{
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 15px;
+  margin: 8px 0;
+  background: #E3E3E3;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-container form select{
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 15px;
+  margin: 8px 0;
+  background: #E3E3E3;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-container form .form-btn{
+  background-color: #F8AAAA;
+  text-transform: capitalize;
+  color: #CC3C45;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+   background-color: #CC3C45;
+   color: #FFFFFF;
+ }
+
+ .form-container form p{
+   margin-top: 10px;
+   font-size: 16px;
+   color: #333333;
+ }
+
+ .form-container form p a{
+   color:#CC3C45;
+ }
+
+ .main-register{
+   padding: 20px;
+   position: relative;
+   bottom: -10px;
+   left: 36px;
+   width: 260px;
+   height: 50px;
+   border: 4px solid #CC3C45;
+   background-color:#CC3C45;
+   font-size: 16px;
+   border-radius: 5px;
+   margin: 70px;
+ }
+
+ .main-register:hover{
+   background-color: #EC1A1A;
+   border: 4px solid #EC1A1A;
+ }
+
+ .main-register a{
+   text-align: center;
+    color: white;
+   font-size: 20px;
+   position: relative; bottom:10px;
+ }
+
+
+
+ .main-login{
+   padding: 20px;
+   position: relative;
+   bottom: -20px;
+   left: 36px;
+   width: 260px;
+   height: 50px;
+   border: 4px solid #CC3C45;
+   background-color:#CC3C45;
+   font-size: 16px;
+   border-radius: 5px;
+   margin: 70px;
+ }
+
+ .main-login p{
+   position: relative;
+   bottom: 70px;
+   width: 190px;
+   left: 12px;
+ }
+
+ .main-login a{
+   text-align: center;
+   color: white;
+   font-size: 20px;
+   position: relative;
+   bottom:37px;
+ }
+
+ .main-login:hover{
+   background-color: #EC1A1A;
+   border: 4px solid #EC1A1A;
+ }
+
+ .form-container form .error-msg{
+   margin: 15px;
+   padding:10px;
+   display: block;
+   background: #CC3C45;
+   color: #FFFFFF;
+   border-radius: 5px;
+   font-size: 18px;
+ }
+
+ .registerborder{
+   border: 0.4px solid #FFFFFF;
+ }
+
+.heading1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: 50px;
+  text-align: center;
+}
+
+.heading2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  position: relative;
+  bottom: 90px;
+  text-align: center;
+}
+
+ .admin-login{
+   padding: 20px;
+   position: relative;
+   top:  40px;
+   left: 34px;
+   width: 260px;
+   height: 50px;
+   border: 4px solid #CC3C45;
+   background-color:#CC3C45;
+   font-size: 16px;
+   border-radius: 5px;
+   margin: 70px;
+ }
+
+
+ .admin-login a{
+   text-align: center;
+   color: white;
+   font-size: 20px;
+   position: relative;
+   bottom:55px;
+ }
+
+.admin-login:hover{
+   background-color: #EC1A1A;
+   border: 4px solid #EC1A1A;
+ }
+
+ 

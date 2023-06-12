@@ -1,0 +1,15 @@
+   
+Database Login Details
+
+$conn = mysqli_connect('localhost','INF4001Nweb','INF4001Npass',
+              'pedal_power');//servername, username, password, databasename
+
+ Servername:localhost
+username:INF4001Nweb
+password:INF4001Npass
+databasename:pedal_power
+
+Admin Login
+
+email: admin@pedalpower.co.za
+password:adminpower
