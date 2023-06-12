@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>Boundless Charging</title>
+    <link rel="icon" href="images/header-logo.svg" />
+
+    <!---font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/dbed6b6114.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--- Css stylesheet-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ***** Header Area Start ***** -->
+    <div class="content">
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <div class="dropdown">
+          <div class="dropbtn">
+            Department <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content">
+            <a href="mens-products.html">Men</a>
+            <a href="womens-products.html">Women</a>
+            <a href="kids-products.html">Kids</a>
+          </div>
+        </div>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+        <a id="openForm">Login</a>
+        <a id="logoutForm">Logout</a>
+        <a
+          ><button id="shop-show">
+            <i onclick="myFunction6()" class="fa fa-shopping-cart"></i
+            ><i
+              id="shop-alert"
+              class="fa fa-circle"
+              aria-hidden="true"
+            ></i></button
+        ></a>
+        <a
+          href="javascript:void(0);"
+          style="font-size: 15px"
+          class="icon"
+          onclick="myFunction1()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="nav-left">
+        <img src="images/header-logo.svg" class="header-logo" alt="" />
+        <div class="nav-name">
+          <h1>
+            Boundless Charging
+            <span><p class="head_small">ONLINE SHOPPING</p></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** signin-signup Start***** -->
+    <div id="login-msg" class="msg">
+      <i class="fa fa-check-circle"></i>
+      Welcome Back! Your login was successful!
+    </div>
+    <div id="register-msg" class="msg">
+      <i class="fa fa-check-circle"></i>
+      Welcome, Your registeration was Successful!
+    </div>
+    <div id="logout-msg" class="msg">Thank you for shopping with us!</div>
+    <div id="empty-msg" class="msg">
+      <i class="fa fa-times-circle"></i> Your cart is empty!
+    </div>
+    <div id="notlogoR-msg" class="msg">
+      <i class="fa fa-times-circle"></i> Please login to continue!
+    </div>
+    <div id="errorReg-msg" class="msg">
+      <i class="fa fa-times-circle"></i> Please enter a correct Username, Email
+      or Password!
+    </div>
+    <div id="errorlog-msg" class="msg">
+      <i class="fa fa-times-circle"></i> Please enter a correct
+      Username/Password!
+    </div>
+
+    <div class="center-box" id="login-div">
+      <h2>Login</h2>
+      <button id="closeForm-2"><i class="fa fa-close"></i></button>
+      <div class="input-wrapper">
+        <i class="fas fa-envelope"></i>
+        <input
+          type="email"
+          id="login-email"
+          class="text-field"
+          name="login-email"
+          placeholder="Email"
+          required
+        />
+      </div>
+      <br />
+      <div class="fontpassword">
+        <i class="fas fa-lock"></i>
+        <input
+          type="password"
+          id="login-password"
+          class="text-field"
+          name="login-password"
+          placeholder="Password"
+          required
+        />
+        <i class="fas fa-eye"></i>
+      </div>
+      <button id="login-btn" class="btn-style">Login</button><br />
+      <button id="reg-btn" class="an-btn">
+        Not a member? <span class="sibut">Register now</span>
+      </button>
+      <br />
+    </div>
+    <div class="center-box" id="register-div">
+      <button id="closeForm"><i class="fa fa-close"></i></button>
+      <h2 id="red">Register</h2>
+
+      <i class="fa fa-user icon"></i>
+      <input
+        type="text"
+        id="register-username"
+        class="text-field"
+        name="register-username"
+        placeholder="Username"
+        required
+      /><br />
+      <i class="fas fa-envelope"></i>
+      <input
+        type="email"
+        id="register-email"
+        class="text-field"
+        name="register-email"
+        placeholder="Email"
+        required
+      /><br />
+      <div class="fontpassword-r">
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        <input
+          type="password"
+          id="register-password"
+          class="text-field"
+          name="register-password"
+          placeholder="Password"
+          required
+        />
+        <i class="fas fa-eye"></i>
+      </div>
+      <button id="register-btn" class="btn-style">Register</button><br />
+      <button id="log-btn" class="an-btn">
+        Have an account? <span class="sibut">Login </span>
+      </button>
+    </div>
+    <!-- ***** signin-signup End***** -->
+
+    <!--Shopping Cart Start-->
+
+    <div id="shop_cart" class="shop_cart">
+      <div class="cart-name">
+        <h1>
+          Shopping Cart
+          <span
+            ><i
+              id="shop-close"
+              class="fa fa-window-close"
+              aria-hidden="true"
+            ></i
+          ></span>
+        </h1>
+      </div>
+      <table class="table-cart">
+        <thead>
+          <tr>
+            <th class="sty"><h3>ITEM</h3></th>
+            <th class=""><h3>ITEM NAME</h3></th>
+            <th class="sty"><h3>PRICE</h3></th>
+            <th class="sty"><h3>QUANTITY</h3></th>
+            <th class="sty"><h3>TOTAL</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr></tr>
+        </tbody>
+        <tr>
+          <td width="40" alt=""></td>
+          <td class="link"></td>
+          <td class=""><h3></h3></td>
+          <td class=""><h3>Grand Total:</h3></td>
+          <td class="grand-total"><h3 id="num8">R0</h3></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <button
+              function="onclick()"
+              type="button"
+              id="checkout"
+              class="checkout"
+            >
+              Checkout
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--Shopping Cart End-->
+
+    <div id="cartcon" class="cartcon">Item added to cart!</div>
+
+    <!-- ***** Mens products Area Starts ***** -->
+    <div class="products">
+      <div class="container">
+        <h1 class="lg-title">Men's Clothing With Offers</h1>
+        <p class="text-light">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          quos sit consectetur, ipsa voluptatem vitae necessitatibus dicta
+          veniam, optio, possimus assumenda laudantium. Temporibus, quis cum.
+        </p>
+        <div class="product-items">
+          <!-- single product -->
+          <div class="product">
+            <div class="product-content">
+              <div class="product-img">
+                <img src="images/mens-products-1.png" alt="product image" />
+              </div>
+              <div class="product-btns">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="add-to-cart"
+                  data-name="Epic Full Zip Jacket"
+                  data-price="750"
+                  data-type="Jacket"
+                  data-image="images/mens-products-1.png"
+                >
+                  add to cart
+                  <span><i class="fas fa-plus"></i></span>
+                </button>
+                <button type="button" class="btn-buy">
+                  buy now
+                  <span><i class="fas fa-shopping-cart"></i></span>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-info-top">
+                <h2 class="sm-title">training</h2>
+                <div class="rating">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                  <i class="fas fa-clock fa-xs"></i>
+                </div>
+              </div>
+              <a href="#" class="product-name"
+                >Epic Full Zip Jacket - Cool Grey</a
+              >
+              <p class="product-price">R 1000.00</p>
+              <p class="product-price">R 750.00</p>
+            </div>
+            <div class="off-info">
+              <h2 class="sm-title">25% off</h2>
+            </div>
+          </div>
+          <!-- end of single product -->
+          <!-- single product -->
+          <div class="product">
+            <div class="product-content">
+              <div class="product-img">
+                <img
+                  src="images/mens-products-image-2.png"
+                  alt="product image"
+                />
+              </div>
+              <div class="product-btns">
+                <button
+                  function="add()"
+                  type="button"
+                  class="btn btn-primary"
+                  id="add-to-cart"
+                  data-name="Insulated SV Jacket"
+                  data-price="1800"
+                  data-type="Jacket"
+                  data-image="images/mens-products-image-2.png"
+                >
+                  add to cart
+                  <span><i class="fas fa-plus"></i></span>
+                </button>
+                <button type="button" class="btn-buy">
+                  buy now
+                  <span><i class="fas fa-shopping-cart"></i></span>
+                </button>
+              </div>
+              <div class="off-info">
+                <h2 class="sm-titlesa">3 left</h2>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-info-top">
+                <h2 class="sm-title">hiking</h2>
+                <div class="rating">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+              </div>
+              <a href="#" class="product-name">Insulated sv jacket - orange</a>
+              <p class="product-price">R 2000.00</p>
+              <p class="product-price">R 1800.00</p>
+            </div>
+          </div>
+          <!-- end of single product -->
+          <!-- single product -->
+          <div class="product">
+            <div class="product-content">
+              <div class="product-img">
+                <img src="images/mens-products-2.png" alt="product image" />
+              </div>
+              <div class="product-btns">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="add-to-cart"
+                  data-name="Windbreaker"
+                  data-price="1333"
+                  data-type="Jacket"
+                  data-image="images/mens-products-2.png"
+                >
+                  add to cart
+                  <span><i class="fas fa-plus"></i></span>
+                </button>
+                <button type="button" class="btn-buy">
+                  buy now
+                  <span><i class="fas fa-shopping-cart"></i></span>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-info-top">
+                <h2 class="sm-title">training</h2>
+                <div class="rating">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+              </div>
+              <a href="#" class="product-name">Windbreaker - yellow fluo</a>
+              <p class="product-price">R 1500.00</p>
+              <p class="product-price">R 1333.00</p>
+            </div>
+          </div>
+          <!-- end of single product -->
+          <!-- single product -->
+          <div class="product">
+            <div class="product-content">
+              <div class="product-img">
+                <img
+                  src="images/mens-products-image-3.png"
+                  alt="product image"
+                />
+              </div>
+              <div class="product-btns">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="add-to-cart"
+                  data-name="Leaf Cold Jacket LT Gen 2"
+                  data-price="1333"
+                  data-type="Jacket"
+                  data-image="images/mens-products-image-3.png"
+                >
+                  add to cart
+                  <span><i class="fas fa-plus"></i></span>
+                </button>
+                <button type="button" class="btn-buy">
+                  buy now
+                  <span><i class="fas fa-shopping-cart"></i></span>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-info-top">
+                <h2 class="sm-title">Outdoors</h2>
+                <div class="rating">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+              </div>
+              <a href="#" class="product-name"
+                >Leaf Cold Jacket LT Gen 2 - Brown</a
+              >
+              <p class="product-price">R 1500.00</p>
+              <p class="product-price">R 1333.00</p>
+            </div>
+            <div class="off-info">
+              <h2 class="sm-title">25% off</h2>
+            </div>
+          </div>
+          <!-- end of single product -->
+          <!-- single product -->
+          <div class="product">
+            <div class="product-content">
+              <div class="product-img">
+                <img src="images/mens-products-5.png" alt="product image" />
+              </div>
+              <div class="product-btns">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="add-to-cart"
+                  data-name="Sweat Pants"
+                  data-price="800"
+                  data-type="Pants"
+                  data-image="images/mens-products-5.png"
+                >
+                  add to cart
+                  <span><i class="fas fa-plus"></i></span>
+                </button>
+                <button type="button" class="btn-buy">
+                  buy now
+                  <span><i class="fas fa-shopping-cart"></i></span>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-info-top">
+                <h2 class="sm-title">lifestyle</h2>
+                <div class="rating">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+              </div>
+              <a href="#" class="product-name">Sweat pants - black</a>
+              <p class="product-price">R 900.00</p>
+              <p class="product-price">R 800.00</p>
+            </div>
+            <div class="off-info">
+              <h2 class="sm-titlela">1 left</h2>
+            </div>
+          </div>
+          <!-- end of single product -->
+          <!-- single product -->
+          <div class="product">
+            <div class="product-content">
+              <div class="product-img">
+                <img src="images/mens-products-6.png" alt="product image" />
+              </div>
+              <div class="product-btns">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="add-to-cart"
+                  data-name="High Tech Joggers"
+                  data-price="800"
+                  data-type="Pants"
+                  data-image="images/mens-products-6.png"
+                >
+                  add to cart
+                  <span><i class="fas fa-plus"></i></span>
+                </button>
+                <button type="button" class="btn-buy">
+                  buy now
+                  <span><i class="fas fa-shopping-cart"></i></span>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-info-top">
+                <h2 class="sm-title">training</h2>
+                <div class="rating">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+              </div>
+              <a href="#" class="product-name">High tech joggers - Ash Gray</a>
+              <p class="product-price">R 900.00</p>
+              <p class="product-price">R 800.00</p>
+            </div>
+          </div>
+          <!-- end of single product -->
+          <!-- single product -->
+          <div class="product">
+            <div class="product-content">
+              <div class="product-img">
+                <img src="images/mens-products-13.png" alt="product image" />
+              </div>
+              <div class="product-btns">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="add-to-cart"
+                  data-name="Stretch Woven Pants"
+                  data-price="900"
+                  data-type="Pants"
+                  data-image="images/mens-products-13.png"
+                >
+                  add to cart
+                  <span><i class="fas fa-plus"></i></span>
+                </button>
+                <button type="button" class="btn-buy">
+                  buy now
+                  <span><i class="fas fa-shopping-cart"></i></span>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-info-top">
+                <h2 class="sm-title">training</h2>
+                <div class="rating">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+              </div>
+              <a href="#" class="product-name"
+                >STRETCH WOVEN PANTS - charcoal</a
+              >
+              <p class="product-price">R 1000.00</p>
+              <p class="product-price">R 900.00</p>
+            </div>
+          </div>
+          <!-- end of single product -->
+          <!-- single product -->
+          <div class="product">
+            <div class="product-content">
+              <div class="product-img">
+                <img src="images/mens-products-9.png" alt="product image" />
+              </div>
+              <div class="product-btns">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="add-to-cart"
+                  data-name="Woven Track Pants"
+                  data-price="650"
+                  data-type="Pants"
+                  data-image="images/mens-products-9.png"
+                >
+                  add to cart
+                  <span><i class="fas fa-plus"></i></span>
+                </button>
+                <button type="button" class="btn-buy">
+                  buy now
+                  <span><i class="fas fa-shopping-cart"></i></span>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-info-top">
+                <h2 class="sm-title">lifestyle</h2>
+                <div class="rating">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+              </div>
+              <a href="#" class="product-name">Woven track pants - blue</a>
+              <p class="product-price">R 800.00</p>
+              <p class="product-price">R 650.00</p>
+            </div>
+            <div class="off-info">
+              <h2 class="sm-title">35% off</h2>
+            </div>
+          </div>
+          <!-- end of single product -->
+        </div>
+      </div>
+    </div>
+    <!-- ***** Mens products Area Ends ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-address-location">
+          <div class="logo">
+            <img src="images/footer-logo.svg" alt="boundless charging logo" />
+          </div>
+          <h1 class="footer-logo-name">
+            Boundless Charging<br /><span><p>ONLINE SHOPPING</p></span>
+          </h1>
+          <ul>
+            <br />
+            <li>
+              <a href="#"><h4>Where to Find Us</h4></a>
+            </li>
+            <li>
+              <a href="#">159 Voortrekker Rd, Parow, 7500, South Africa </a>
+            </li>
+            <li><a href="#">Boundlesscharging@gmail.com</a></li>
+            <li><a href="#">060 102 0403</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-shopping-categories">
+          <div>
+            <ul>
+              <h4>Shopping & Categories</h4>
+              <li><a href="mens-products.html">Men's Shopping</a></li>
+              <li><a href="womens-products.html">Women's Shopping</a></li>
+              <li><a href="kids-products.html">Kid's Shopping</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-nav-links">
+          <div>
+            <ul>
+              <h4>Useful Links</h4>
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-help-infromation">
+          <div>
+            <ul>
+              <h4>Help & Information</h4>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">FAQ's</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Track Your Order</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-social-media-link">
+          <p>
+            Copyright © 2022 Boundless Charging Co., Ltd. All Rights Reserved.
+          </p>
+          <div class="socialgifs">
+            <ul>
+              <li>
+                <img class="iradius" src="images/facebook-circled--v3.gif" />
+              </li>
+              <li>
+                <img class="iradius" src="images/twitter-circled--v3.gif" />
+              </li>
+              <li>
+                <img class="iradius" src="images/linkedin-circled--v5.gif" />
+              </li>
+              <li>
+                <img class="iradius" src="images/instagram-new--v2.gif" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ***** Footer End ***** -->
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- javascript file -->
+    <script src="bundle.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

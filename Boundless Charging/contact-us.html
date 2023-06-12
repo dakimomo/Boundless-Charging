@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
+
+    <title>Boundless Charging</title>
+    <link rel="icon" href="images/header-logo.svg" />
+
+    <!--font Awesome-->
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+    <!-- css file-->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+    <!-- ***** Header Area Ends ***** -->  
+    <div class="content">
+        <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <div class="dropdown">
+        <div class="dropbtn">
+        Department  
+            <i class='fas fa-chevron-down'></i>
+            </div>
+            <div class="dropdown-content">
+            <a href="mens-products.html">Men</a>
+            <a href="womens-products.html">Women</a>
+            <a href="kids-products.html">Kids</a>
+            </div>
+        </div>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+        <a   id="openForm">Login</a>
+        <a  id="logoutForm">Logout</a>
+        <a
+            href="javascript:void(0);"
+            style="font-size: 15px"
+            class="icon"
+            onclick="myFunction1()"
+            >
+            <i class="fa fa-bars"></i></a >
+        </div>
+        <div class="nav-left">
+        <div class="nav-img">
+            <img src="images/header-logo.svg" class="header-logo" alt="" />
+        </div>
+        <div class="nav-name">
+            <h1>
+            Boundless Charging
+            <span><p class="head_small">ONLINE SHOPPING</p></span>
+            </h1>
+        </div>
+        </div>
+    </div>
+    <hr />
+    <!-- ***** Header Area End ***** -->
+
+   
+ <!-- ***** signin-signup Start***** -->
+<div id="login-msg" class="msg"><i class="fa fa-check-circle"></i>Welcome Back! Your login was successful!</div>
+  <div id="register-msg" class="msg"><i class="fa fa-check-circle"></i>Welcome, Your registeration was Successful!</div>
+    <div id="logout-msg" class="msg">Thank you for shopping with us!</div>
+       <div id="errorReg-msg" class="msg">
+            <i class = "fa fa-times-circle"></i>
+            Please enter a correct Username, Email or Password!</div>
+              <div id="errorlog-msg" class="msg">
+                <i class = "fa fa-times-circle"></i>
+                Please enter a correct Username/Password!</div>
+ <div class="center-box" id="login-div">
+      <h2>Login</h2>
+      <button id="closeForm-2"> <i class="fa fa-close"></i></button>
+        <div class="input-wrapper">
+        <i class="fas fa-envelope"></i>
+        <input 
+            type="email"
+            id="login-email"
+            class="text-field"
+            name="login-email"
+            placeholder= "Email"
+            required/>
+        </div>
+        <br />
+        <div class="fontpassword">
+        <i class='fas fa-lock'></i>
+        <input
+            type="password"
+            id="login-password"
+            class="text-field"
+            name="login-password"
+            placeholder="Password"
+            required
+        />
+        <i class="fas fa-eye"></i>
+        </div>
+        <button id="login-btn" class="btn-style">Login</button><br />
+        <button id="reg-btn" class="an-btn">
+            Not a member? <span class="sibut">Register now</span></button>
+        <br>
+        </div>
+        <div class="center-box" id="register-div">
+        <button id="closeForm"> <i class="fa fa-close"></i></button>
+            
+        <h2 id="red">Register</h2>
+        <i class="fa fa-user icon "></i>
+        <input
+            type="text"
+            id="register-username"
+            class="text-field"
+            name="register-username"
+            placeholder="Username"
+            required
+        /><br />
+        <i class="fas fa-envelope"></i>
+        <input
+            type="email"
+            id="register-email"
+            class="text-field"
+            name="register-email"
+            placeholder="Email"
+            required
+        /><br />
+            <div class="fontpassword-r">
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        <input
+            type="password"
+            id="register-password"
+            class="text-field"
+            name="register-password"
+            placeholder="Password"
+            required
+        />
+        <i class="fas fa-eye"></i>
+
+    </div>
+    <button id="register-btn" class="btn-style">Register</button><br />
+    <button id="log-btn" class="an-btn">Have an account? <span class="sibut">Login </span></button>
+    </div>
+    <!-- ***** signin-signup End***** -->
+    
+
+    <!-- ***** Google-map Area start ***** -->
+    <div class="contact-wrapper">
+        <!--google-map plug-in-->
+        <div class="google-map"><div class="gmap_canvas"><iframe width="500" height="400"  src="https://maps.google.com/maps?q=159%20Voortrekker%20Rd,%20Parow,%207500,%20South%20Africa&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:400px;width:500px;}</style><a href="https://www.embedgooglemap.net">embedding google maps in web page</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:500px;}</style></div></div>
+        <!-- ***** Google-map Area Ends ***** -->
+
+        <!-- *****Contact form Area Starts ***** -->
+        <div class="form-column">
+            <form  id="contactForm" >
+                <h1>Contact Us</h1>
+                <div  class="alert"><i  id='con' class="fa fa-check-circle"></i>Your message has been sent</div>
+                <div  class="alert2"><i id='con'  class="fa fa-times-circle"></i>Please fill in all the fields below</div>
+                <input type="text" class="contact-fc"  id="name_fm" name="firstname" placeholder="Your name" >
+                <input type="text"  class="contact-fc "id="email_fm" name="email"  placeholder="Your email" >
+                <textarea id="subject_fm" class="contact-fc" name="subject" placeholder="Your message"  ></textarea>
+                    <button type="button"  id="f-button"><i class="fa fa-paper-plane"></i></button> 
+            </form>
+            </div>
+    </div>
+    <!-- *****Contact for Area Ends ***** -->
+
+    <!-- ***** Subscribe Area Starts ***** -->
+    <div class="subscribe-wrapper">
+        <div class="subscribe-heading">
+            <h1>By Subscribing To Our Newsletter You <br> Can Get 25% Off</h1>
+        </div>
+        <div class="line">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+        </div>
+                <div class="sub">
+                    <form id="subscribe">
+                        <input class="input" name="name" type="text" id="name" placeholder="Your Name" required="">
+                        <input  class="input" name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                            <button type="submit" class="sub-button"><i class="fa fa-paper-plane"></i></button> 
+                            
+                    </form>
+                </div>
+        <div class="subscribe-store-location">
+            <div>
+                <ul>
+                    <h2>Store Location</h2>
+                    <li>159 Voortrekker Rd, <br>Parow, 7500, South Africa</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe-work-hours">
+            <div>
+                <ul>
+                    <h2>Work Hours</h2>
+                    <li>08:30 AM - 5: 30 Pm</li>
+                    <li>Daily</li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe-phone">
+            <div>
+                <ul>
+                    <h2>Phone:</h2>
+                    <li>060 102 0403</li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe-email">
+            <div>
+                <ul>
+                    <h2>Email</h2>
+                    <li>Boundlesscharging@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe-office-location">
+            <div>
+                <h2>Office Location</h2>
+                    <ul>
+                        <li>Canas</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="subscribe-social-media">
+            <div>
+                <ul>
+                    <h2>Social Media</h2>
+                    <li><a href="#">Facebook</a>, <a href="#">Instagram</a>, <br><a href="#">Twitter</a>, <a href="#">Linkedin</a></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Subscribe Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-address-location">      
+                <div class="logo">
+                    <img src="images/footer-logo.svg" alt="boundless charging logo">
+                </div>
+                    <h1 class="footer-logo-name">Boundless Charging<br><span><p>ONLINE SHOPPING</p></span></h1>     
+                        <ul>
+                            <br>
+                            <li><a href="#"><h4>Where to Find Us</h4></a></li>
+                            <li><a href="#">159 Voortrekker Rd, Parow, 7500, South Africa </a></li>
+                            <li><a href="#">Boundlesscharging@gmail.com</a></li>
+                            <li><a href="#">060 102 0403</a></li>
+                        </ul>
+            </div>
+            <div class="footer-shopping-categories">
+                <div>
+                    <ul>
+                        <h4>Shopping & Categories</h4>
+                        <li><a href="mens-products.html">Men's Shopping</a></li>
+                        <li><a href="womens-products.html">Women's Shopping</a></li>
+                        <li><a href="kids-products.html">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-nav-links">
+                <div>
+                    <ul>
+                        <h4>Useful Links</h4>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-help-infromation">
+                <div>    
+                    <ul>
+                        <h4>Help & Information</h4>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social-media-link">
+                    <p>Copyright © 2022 Boundless Charging Co., Ltd. All Rights Reserved.</p>
+                <div class="socialgifs">
+                    <ul>
+                        <li><img class="iradius" src="images/facebook-circled--v3.gif"></li>
+                        <li><img class="iradius" src="images/twitter-circled--v3.gif"></li>
+                        <li><img class="iradius" src="images/linkedin-circled--v5.gif"></li>
+                        <li><img class="iradius" src="images/instagram-new--v2.gif"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!--***** Footer End ***** -->
+
+    <!---jQuery file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- javascript file -->
+    <script  src="bundle.js"></script> 
+    <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

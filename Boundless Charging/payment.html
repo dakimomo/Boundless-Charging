@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Boundless Charging</title>
+    <link rel="icon" href="images/header-logo.svg" />
+
+    <!--font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/dbed6b6114.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- css file-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ***** Header Area Start ***** -->
+    <div class="content">
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <div class="dropdown">
+          <div class="dropbtn">
+            Department
+            <i class="fas fa-chevron-down"></i>
+          </div>
+
+          <div class="dropdown-content">
+            <a href="mens-products.html">Men</a>
+            <a href="womens-products.html">Women</a>
+            <a href="kids-products.html">Kids</a>
+          </div>
+        </div>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+        <a id="openForm" class="hideL">Login</a>
+        <a id="logoutForm" class="hideL">Logout</a>
+        <a
+          href="javascript:void(0);"
+          style="font-size: 15px"
+          class="icon"
+          onclick="myFunction1()"
+        >
+          <i class="fa fa-bars"></i
+        ></a>
+      </div>
+      <div class="nav-left">
+        <div class="nav-img">
+          <img src="images/header-logo.svg" class="header-logo" alt="" />
+        </div>
+        <div class="nav-name">
+          <h1>
+            Boundless Charging
+            <span><p class="head_small">ONLINE SHOPPING</p></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** signin-signup Start***** -->
+    <div id="errorpty" class="msg">
+      <i class="fa fa-times-circle"></i>Please enter your details to continue!
+    </div>
+    <div id="completepty" class="msg">
+      <i class="fa fa-check-circle"></i> Your order has been processed and ready
+      for shipment!
+    </div>
+
+    <div class="center-box" id="login-div">
+      <h2>Login</h2>
+      <button id="closeForm-2"><i class="fa fa-close"></i></button>
+      <div class="input-wrapper">
+        <i class="fas fa-envelope"></i>
+        <input
+          type="email"
+          id="login-email"
+          class="text-field"
+          name="login-email"
+          placeholder="Email"
+          required
+        />
+      </div>
+      <br />
+      <i class="fas fa-lock"></i>
+      <input
+        type="password"
+        id="login-password"
+        class="text-field"
+        name="login-password"
+        placeholder="Password"
+        required
+      /><br />
+      <button id="login-btn" class="btn-style">Login</button><br />
+      <button id="reg-btn" class="an-btn">
+        Not a member? <span class="sibut">Register now</span>
+      </button>
+      <br />
+    </div>
+    <div class="center-box" id="register-div">
+      <button id="closeForm"><i class="fa fa-close"></i></button>
+      <h2>Register</h2>
+      <br />
+      <i class="fa fa-user icon"></i>
+      <input
+        type="text"
+        id="register-username"
+        class="text-field"
+        name="register-username"
+        placeholder="Username"
+        required
+      /><br />
+      <i class="fas fa-envelope"></i>
+      <input
+        type="email"
+        id="register-email"
+        class="text-field"
+        name="register-email"
+        placeholder="Email"
+        required
+      /><br />
+      <i class="fa fa-lock" aria-hidden="true"></i>
+      <input
+        type="password"
+        id="register-password"
+        class="text-field"
+        name="register-password"
+        placeholder="Password"
+        required
+      /><br />
+      <button id="register-btn" class="btn-style">Register</button><br />
+      <button id="log-btn" class="an-btn">
+        Have an account? <span class="sibut">Login </span>
+      </button>
+    </div>
+    <!-- ***** signin-signup End***** -->
+
+    <!--**** checkoutform starts ****-->
+    <div class="payment-wrapper">
+      <div class="title">Checkout</div>
+      <form id="Complete">
+        <div class="payment-container">
+          <div class="personal-info">
+            <h2 class="pay-title">Shipping Address</h2>
+            <div class="payment-item">
+              <label for="FirstN"><i class="fas fa-user"></i> Full Name</label>
+              <input
+                type="text"
+                id="FirstN"
+                class="payment-input"
+                placeholder="John James"
+              />
+            </div>
+            <div class="payment-item">
+              <label for="EmailA"
+                ><i class="fa fa-envelope" aria-hidden="true"></i> Email</label
+              >
+              <input
+                type="text"
+                id="EmailA"
+                class="payment-input"
+                placeholder="johnjames@gmail.com"
+              />
+            </div>
+            <div class="payment-item">
+              <label for="BillA"
+                ><i class="fas fa-address-card"></i> Billing Address</label
+              >
+              <input
+                type="text"
+                id="BillA"
+                class="payment-input"
+                placeholder="37 Arrow Street"
+              />
+            </div>
+            <div class="payment-items">
+              <label for="City"><i class="fas fa-city"></i> City</label>
+              <input type="text" id="City" class="city" placeholder="Cape" />
+            </div>
+            <div class="payment-items">
+              <label for="Zip">Zip</label>
+              <input type="text" id="Zip" class="zip-code" placeholder="7784" />
+            </div>
+          </div>
+          <div class="card-info">
+            <h2 class="pay-title">Payment</h2>
+
+            <div class="payment-item">
+              <label for="CardNam">Cardholder's Name</label>
+              <input
+                type="text"
+                id="CardNam"
+                class="payment-input"
+                placeholder="John May James"
+              />
+            </div>
+            <div class="payment-item">
+              <label for="CardNub">Card Number</label>
+              <input
+                id="CardNub"
+                type="text"
+                class="payment-input"
+                maxlength="16"
+                data-mask="0000 0000 0000 0000"
+                placeholder="1111 2222 3333 4444"
+              />
+            </div>
+
+            <div class="payment-items">
+              <label for="Exp">Exp Date</label>
+              <input id="Exp" type="text" class="date" placeholder="09/2026" />
+            </div>
+            <div class="payment-items">
+              <label for="Cvv">CVV</label>
+              <input type="text" class="cvc" id="Cvv" placeholder="456" />
+            </div>
+            <div class="accepted-meth">
+              <label>Accepted Cards</label>
+            </div>
+            <div class="payment-icons">
+              <i class="fa fa-cc-mastercard"></i>
+              <i class="fa fa-credit-card"></i>
+              <i class="fa fa-cc-visa"></i>
+            </div>
+          </div>
+
+          <div class="cart-info">
+            <div class="payment-sum">
+              <h2>Payment Summary</h2>
+            </div>
+            <div>
+              <div class="payment-sub">
+                <b><p>Sub-total:</p></b>
+              </div>
+              <div class="payment-sub" id="bpmt-total"></div>
+            </div>
+            <div>
+              <div class="payment-ship">
+                <b><p>Shipping:</p></b>
+              </div>
+
+              <div class="payment-ship" id="payment-ship">
+                <p>Free</p>
+              </div>
+            </div>
+            <div>
+              <div class="payment-vat">
+                <b><p>Vat:</p></b>
+              </div>
+
+              <div class="payment-vat" id="bpmt-total3"></div>
+            </div>
+            <hr id="payment-hr" />
+            <div>
+              <div class="payment-grand">
+                <b><p>Grand Total:</p></b>
+              </div>
+              <div class="payment-grand" id="bpmt-total2">
+                <div id="bpmt-total2"></div>
+              </div>
+            </div>
+            <div class="payment-button">
+              <button
+                type="submit"
+                id="payMen"
+                onclick="checkForm2()"
+                class="pyt-button"
+              >
+                Complete Payment
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--**** checkoutform Ends ****-->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-address-location">
+          <div class="logo">
+            <img src="images/footer-logo.svg" alt="boundless charging logo" />
+          </div>
+          <h1 class="footer-logo-name">
+            Boundless Charging<br /><span><p>ONLINE SHOPPING</p></span>
+          </h1>
+          <ul>
+            <br />
+            <li>
+              <a href="#"><h4>Where to Find Us</h4></a>
+            </li>
+            <li>
+              <a href="#">159 Voortrekker Rd, Parow, 7500, South Africa </a>
+            </li>
+            <li><a href="#">Boundlesscharging@gmail.com</a></li>
+            <li><a href="#">060 102 0403</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-shopping-categories">
+          <div>
+            <ul>
+              <h4>Shopping & Categories</h4>
+              <li><a href="mens-products.html">Men's Shopping</a></li>
+              <li><a href="womens-products.html">Women's Shopping</a></li>
+              <li><a href="kids-products.html">Kid's Shopping</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-nav-links">
+          <div>
+            <ul>
+              <h4>Useful Links</h4>
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-help-infromation">
+          <div>
+            <ul>
+              <h4>Help & Information</h4>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">FAQ's</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Track Your Order</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-social-media-link">
+          <p>
+            Copyright © 2022 Boundless Charging Co., Ltd. All Rights Reserved.
+          </p>
+          <div class="socialgifs">
+            <ul>
+              <li>
+                <img class="iradius" src="images/facebook-circled--v3.gif" />
+              </li>
+              <li>
+                <img class="iradius" src="images/twitter-circled--v3.gif" />
+              </li>
+              <li>
+                <img class="iradius" src="images/linkedin-circled--v5.gif" />
+              </li>
+              <li>
+                <img class="iradius" src="images/instagram-new--v2.gif" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ***** Footer End ***** -->
+
+    <!-- jQuery ---->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- javascript file -->
+    <script src="bundle.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
