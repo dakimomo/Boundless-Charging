@@ -5,11 +5,12 @@ convenient smartphone charging on the go. <br> <br>
 
 # OverView
  User Interface and overview of the application. <br> <br>
-![boundless-home](https://github.com/user-attachments/assets/7c292da7-1a75-4094-947a-0442d1678dee)
+ 
+![boundless-home](https://github.com/user-attachments/assets/27b5f3e2-a0ca-4ab1-83ed-a220cb253d2c)
 
-![boundless-cart](https://github.com/user-attachments/assets/c2445145-2877-4351-8026-945faf926fe6) <br> <br>
+![boundless-cart](https://github.com/user-attachments/assets/37df917d-c385-43e6-906e-ba04df796b48)
 
-
+ <br> <br>
 # 🛠️ Tools Used 
 - HTML
 - CSS
