@@ -5,7 +5,7 @@ convenient smartphone charging on the go.
 
 https://boundlesscharging.netlify.app/
 
-<br> <br>
+<br>
 
 # OverView
  User Interface and overview of the application. <br> <br>
