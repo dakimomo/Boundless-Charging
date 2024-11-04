@@ -1,7 +1,7 @@
 # Boundless Charging
 Collaboratively developed a fully functional E-commerce site for Boundless Charging, a start-up that  
 revolutionises mobile charging by using wearable clothing to harness kinetic energy from motion, enabling  
-convenient smartphone charging on the go. <br> <br>
+convenient smartphone charging on the go. 
 
 https://boundlesscharging.netlify.app/
 
