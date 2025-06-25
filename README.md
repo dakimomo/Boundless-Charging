@@ -19,7 +19,6 @@ https://boundlesscharging.netlify.app/
 - HTML
 - CSS
 - Javascript
-- Nodejs
 - FireBase (NoSQL)
 
 # 🔐Features
